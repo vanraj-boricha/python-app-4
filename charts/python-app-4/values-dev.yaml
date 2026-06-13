@@ -2,7 +2,7 @@ replicaCount: 1
 image:
   repository: 454143665149.dkr.ecr.ap-south-1.amazonaws.com/python-app-4
   pullPolicy: IfNotPresent
-  tag: 
+  tag: "725491"
 resources:
   requests:
     cpu: 20m
