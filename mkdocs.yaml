@@ -1,0 +1,12 @@
+site_name: 'python-app-4'
+site_description: 'Main documentation for the python-app-4'
+repo_url: https://github.com/vanrajboricha/python-app-4
+edit_uri: edit/main/docs
+
+plugins:
+  - techdocs-core
+
+# For sidebar navigation on https://backstage.io/, see `microsite/sidebars.json`
+nav:
+  - Overview:
+      - Getting started: 'docs/index.md'

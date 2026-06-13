@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: python-app-4
+  description: Python app that displays time.
+  annotations:
+    github.com/project-slug: vanraj-boricha/python-app-4
+    backstage.io/techdocs-ref: dir:.
+    prometheus.io/rule: 'sum(rate(container_cpu_usage_seconds_total{container="python-app-4"}[5m]))|CPU Load,container_memory_working_set_bytes{container="python-app-4"}|Memory Usage,rate(http_requests_total{container="python-app-4"}[5m])|HTTP Request Rate,rate(http_errors_total{container="python-app-4"}[5m])|HTTP Error Rate'
+    prometheus.io/alert: 'KubePodCrashLooping'
+    argocd/app-name: python-app-4
+    grafana/dashboard-selector: '"python-app-4" in tags'
+    grafana/alert-label-selector: "app=python-app-4"
+spec:
+  type: service
+  owner: development
+  lifecycle: experimental
